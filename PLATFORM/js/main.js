@@ -10,6 +10,8 @@ function parallax(e) {
 
 
 async function disapearPlanets(e) {
+
+    document.getElementById('audio_click').play();
     let i = -1;
     document.removeEventListener("mousemove",parallax);
     document.querySelectorAll(".planets").forEach(function(move) {
@@ -49,4 +51,9 @@ function whiteOut() {
         
         
 },2000));
+}
+
+
+function playHover() {
+    document.getElementById('audio_hover').play();
 }

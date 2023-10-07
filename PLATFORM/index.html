@@ -32,11 +32,12 @@
             <p class="white">Your guide to learn about Lunar and Solar Eclipse</p>
         </div>
         <div class="home_menu row flex-row flex-center mt1">
-            <div onclick="disapearPlanets()" class="menu_element center">Kids</div>
-            <div class="menu_element center">Young Learners</div>
+            <div onmouseover="playHover()" onclick="disapearPlanets()" class="menu_element center">Kids</div>
+            <div onmouseover="playHover()" class="menu_element center">Young Learners</div>
         </div>
     </div>
 
-   
+    <audio id="audio_hover" src="./assets/sound_effects/click-button-app-147358.mp3"></audio>
+    <audio id="audio_click" src="./assets/sound_effects/click_effect-86995.mp3"></audio>
 </body>
 </html>
