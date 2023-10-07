@@ -134,6 +134,11 @@ body {
     transition: all ease-in-out .3s;
     
 }
+
+.menu_element:focus {
+    background-color: #ffffff;
+    
+}
 /****** KeyFrames ********/
 
 
