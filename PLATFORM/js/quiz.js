@@ -67,11 +67,19 @@ const quizData = [
         const answer = getSelected();
         if (answer) {
             if (answer === quizData[currentQuiz].correct) score++;
+            /*else  change the color of the label to red*/
             currentQuiz++;
+            /* change the colore of the true answer to green */
+            
             if (currentQuiz < quizData.length) loadQuiz();
             else {
+                if (score/quizData.length <0.25) message = "You're off to a good start, and we can work together to make it even better. \n <h1> 😅 </h1>";
+                    else if (score/quizData.length >=0.25 && score/quizData.length<0.5) message = "You're learning, and that's great! Let's keep practicing to improve. \n <h1> 🌱 </h1>";
+                        else if (score/quizData.length >=0.5 && score/quizData.length<0.75) message = "You're doing well! Keep it up. \n <h1> 👏 </h1>";
+                            else  message = "Wow, you're doing amazing! Your understanding is impressive. Keep challenging yourself. \n <h1> 🏆 </h1>";
                 quiz.innerHTML = `
-                <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+                <h2>You answered <i> ${score}/${quizData.length} </i> questions correctly</h2>
+                <h2>${message}</h2>
                 <button onclick="history.go(0)">Take the quiz again</button>
                 ` 
             }
