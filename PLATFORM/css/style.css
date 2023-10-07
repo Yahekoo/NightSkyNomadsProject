@@ -83,20 +83,27 @@ body {
     z-index: 3;
     width: 100%;
 }
-
+.home_menu {
+    width: max-content;
+}
 .menu_element {
     cursor: pointer;
     min-width: 200px;
     padding: 1rem 1rem;
     margin: 2rem 1rem;
-    background-color: aliceblue ;
+    background-color: rgb(255, 255, 255) ;
     border: 3px solid #ffffff;
+    box-sizing: border-box;
     border-radius: 10px;
     color: black;
-    
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .menu_element:hover {
+    box-sizing: border-box;
     cursor: pointer;
     min-width: 200px;
     padding: 1rem 1rem;
@@ -109,11 +116,6 @@ body {
     transition: all ease-in-out .3s;
     
 }
-.menu_element:focus {
-    background-color: #ffffff;
-    
-}
-
 
 .level {
     cursor: pointer;
