@@ -14,6 +14,7 @@ body {
   }
 
 .app-container {
+   
     background-color: rgba(15, 14, 14, 0.748);
     width: inherit;
     height: inherit;
@@ -48,38 +49,207 @@ body {
 }
 
 #nomad_icon {
-    animation: MoveUpDown 6s ease-in-out infinite;
+    animation: MoveUpDown 3.4s ease-in-out infinite;
     position: relative;
     
-    width: 100px;
+    width: 250px;
     height: auto;
     
 }
 
+.planets  {
+    position: absolute;
+   
+    height : auto ; 
+  
+    object-fit: contain;
+    opacity: .5;
+}
 
+.planets:nth-child(5) {  
+    animation: Rotate5 3.4s ease-in-out infinite;
+    width: 130px;
+    top: 10rem;
+    left: 15rem;
+}
 
+.planets:nth-child(2) { 
+
+    animation: Rotate2 3.4s ease-in-out infinite;
+    width: 160px;
+    top: 3rem;
+    right : 13rem ;
+}
+
+.planets:nth-child(3) { 
+    animation: Rotate3 3.4s ease-in-out infinite;
+    width: 110px;
+    bottom: 10rem;
+    right: 20rem;
+}
+
+.planets:nth-child(4) { 
+    width: 90px;
+    bottom: 10rem;
+    left: 5rem;
+
+    animation: Rotate4 3s ease-in-out infinite;
+}
+
+.planets:nth-child(1) { 
+
+    animation: Rotate1 3.4s ease-in-out infinite;
+    width: 120px;
+    bottom: 30rem;
+    right: 25rem;
+}
+
+.planets_container {
+    z-index: 3;
+    width: 100%;
+}
+
+.menu_element {
+    cursor: pointer;
+    min-width: 200px;
+    padding: 1rem 1rem;
+    margin: 2rem 1rem;
+    background-color: aliceblue ;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    color: black;
+    
+}
+
+.menu_element:hover {
+    cursor: pointer;
+    min-width: 200px;
+    padding: 1rem 1rem;
+    margin: 2rem 1rem;
+    background-color: rgb(46, 46, 46) ;
+    border: 3px dashed #ffffff;
+    border-radius: 10px;
+    color: white;
+    transform: scale(1.1);
+    transition: all ease-in-out .3s;
+    
+}
 /****** KeyFrames ********/
+
+
 
 @keyframes MoveUpDown {
     0%, 100% {
       bottom: 0;
     }
     50% {
-      bottom: 20px;
+      bottom: 30px;
     }
   }
 
+  @keyframes Rotate3 {
+    0%, 100% {
+     
+        bottom: 10rem;
+        right: 20rem;
+        
+      }
+      50% {
+       
+        bottom: 10.3rem;
+        right: 19rem;
+      }
+    }
 
 
+    @keyframes Rotate4 {
+        0%, 100% {
+         
+            bottom: 10rem;
+            left: 5rem;
+            
+          }
+          50% {
+           
+            bottom: 10.3rem;
+            right: 5.8rem;
+          }
+        }
+    
+  @keyframes Rotate5 {
+    0%, 100% {
+     
+        top: 9.6rem;
+        left: 14rem;
+        
+      }
+      50% {
+       
+        top: 10rem;
+        left: 15rem;
+      }
+    }
+
+
+@keyframes Rotate1 {
+        0%, 100% {
+         
+            bottom: 30rem;
+            right: 25rem;
+            
+          }
+          50% {
+           
+            bottom: 30.4rem;
+            right: 25.3rem;
+          }
+        }
+
+        @keyframes Rotate2 {
+            0%, 100% {
+             
+                top: 3rem;
+                right : 13rem ;
+                
+              }
+            
+              50% {
+               
+                top: 3.2rem;
+                right : 13.2rem ;
+              }
+          
+            }
 /******* FONT SETTINGS *******/
 
 
-h3 {
-    font-size: 2rem;
-    color: white;
-    font-weight: 600;
+h3 , h1, h2 , p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    font-weight: 600;
 }
 .m2 {
     margin: 2rem 2rem;
+}
+.mt2 {
+    margin-top: 2rem;
+}
+.mt3 {
+    margin-top: 3rem;
+}
+
+.mt1 {
+    margin-top : 1rem;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+.rem2 {
+    font-size: 2rem ;
+}  
+.white{
+    color: white;
 }
