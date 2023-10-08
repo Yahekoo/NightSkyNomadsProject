@@ -65,7 +65,7 @@ function start(e) {
             window.open("../index.html","_self")
           break;
           case 'about':
-            window.open("AboutUs.html","_self")
+            window.open("pages/AboutUs.html","_self")
           break;
       }
 
