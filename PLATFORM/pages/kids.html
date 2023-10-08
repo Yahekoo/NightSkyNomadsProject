@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kids' Space: Moon & Eclipses</title>
+<script src="../js/main.js"></script>
 <style>
+    
     body {
         background-image: url("../assets/bg-1.jpg"); 
         background-color: rgb(15, 14, 14);
@@ -102,11 +104,52 @@
         background-color: #005f5f;
         transform: scale(1.05);
     }
+
+
+    .info_menu {
+        width: 200px;
+        position: absolute;
+        padding: 0rem 2rem;
+    }
+    .info_menu_element {
+        cursor: pointer;
+        min-width: 200px;
+        padding: .7rem .7rem;
+        margin: 1rem 1rem;
+        background-color: #ffffffd8 ;
+        box-sizing: border-box;
+        border-radius: 5px;
+        color: black;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        z-index: 99;
+        border : 1px solid #000;
+        transition: all ease-in-out .3s;
+    }
+
+    .info_menu_element:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        min-width: 200px;
+        background-color: rgba(0, 0, 0, 0.897) ;
+        border-radius: 5px;
+        border : 1px solid #fff;
+        color: rgb(255, 255, 255);
+        font-size: 1.1rem;
+        transform: scale(1.1);
+        transition: all ease-in-out .3s;
+    }
+
 </style>
 </head>
 <body>
 
 <div class="center-container">
+    <div class="info_menu flex-row flex-bound center mt1">
+        <div onclick="start('home')" class="info_menu_element">Home</div>
+    </div>
     <header>
         <h1>Discover The Moon!</h1>
     </header>
