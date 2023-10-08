@@ -105,4 +105,18 @@ li {
     cursor: pointer;
     border-radius: 15px;
   }
+  .logo-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 70px; /* Adjust the width as needed */
+    height: auto;
+}
 
+.logo-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px; /* Adjust the width as needed */
+    height: auto;
+}
