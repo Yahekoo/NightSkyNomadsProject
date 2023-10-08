@@ -1,20 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/common.css" rel="stylesheet" />
-    <script src="js/main.js"></script>
-    <title>Kids - NightSkyNomads</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids' Space: Moon & Eclipses</title>
+<style>
+    body {
+        background-image: url("../assets/bg-1.jpg"); 
+        background-color: rgb(15, 14, 14);
+        background-position: center; 
+        background-repeat: repeat-y; 
+        background-size: cover; 
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;  /* Changed to flex-start */
+        align-items: center;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .center-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        color: whitesmoke;
+    }
+
+    #imageDiv {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        margin: 0 auto;  /* Center the div horizontally */
+    }
+
+    #imageDiv img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.3s;
+        opacity: 0;
+    }
+
+    #imageDiv img.current {
+        opacity: 1;
+    }
+
+
+    .videos-container {
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .video-row {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+        width: 400px;
+        margin: 0 10px;
+    }
+    .video-wrapper {
+        flex: 1;
+        margin: 20px;
+    }
+
+    .video-title {text-align: center;
+        margin-bottom: 10px;
+        color: whitesmoke;
+        font-size: 20px;
+        text-shadow: 2px 2px 4px rgba(200, 255, 0, 0.5);  /* Add shadow to text */
     
+    }
+
+    .button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #008CBA;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #005f5f;
+        transform: scale(1.05);
+    }
+</style>
 </head>
-<body class="bg">
+<body>
 
-  
+<div class="center-container">
+    <header>
+        <h1>Discover The Moon!</h1>
+    </header>
 
+    <div class="content">
+        <div id="imageDiv" onclick="changeImage()">
+            <img src="../assets/moonPhasess/WANING CRESENT.png" class="current">
+            <img src="../assets/moonPhasess/WAXING GIBBOUS.png">
+            <img src="../assets/moonPhasess/FULL MOON.png">
+            <img src="../assets/moonPhasess/WANING GIBBOUS.png">
     
-   
+            <img src="../assets/moonPhasess/LAST QUARTER.png" >
+            <img src="../assets/moonPhasess/WANING CRESENT.png">
+            
+        </div>
+    </div>
+
+    <div class="videos-container">
+        <div class="video-row"  >
+            <div>
+                <div class="video-title">Lunar Eclipse</div>
+                <div class="video-wrapper" style="margin-left: -150px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LH-aSizsx1o?si=8XyDyIzG0jS-YEgb" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div>
+                <div class="video-title">Solar Eclipse</div>
+                <div class="video-wrapper" style="margin-left: -150px;">
+                    
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/E6OtLfszaVI?si=w0n-yp18eed3L315" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="video-row">
+            <div>
+                <div class="video-title">Eclipses and Movements of the Earth</div>
+                <div class="video-wrapper"  style="margin-left: -150px;" >
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ON7242bxwP8?si=wuEyVgvZdW-LEXmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="https://spaceplace.nasa.gov/search/eclipse/" 
+        class="button" 
+        style="width: 60%;text-decoration: none;"
+        target="_blank">
+        You want have FUN  , Start the Game
+    </a>
+</div>
+
+<script>
+    var currentIndex = 0;  // Index of the currently displayed image
+
+    function changeImage() {
+        var images = document.querySelectorAll('#imageDiv img');
+        images[currentIndex].classList.remove('current');  // Hide current image
+        currentIndex = (currentIndex + 1) % images.length;  // Increment index, wrap around to 0 if necessary
+        images[currentIndex].classList.add('current');  // Show next image
+    }
+
+    // Set an interval to call changeImage every 2 seconds
+    setInterval(changeImage, 1500);
+</script>
+
 </body>
 </html>
