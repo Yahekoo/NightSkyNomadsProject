@@ -19,6 +19,7 @@
     background-color: rgba(15, 14, 14, 0.348);
     width: inherit;
     height: inherit;
+    overflow: hidden;
 }
 
 .slide-container {
@@ -459,6 +460,46 @@ body.bg6 {
     z-index: -1;
     
 }
+.calendar_content img{
+    width: 800px;
+    height: auto;
+    border: 3px solid #ffcc00; 
+    transition: all .3s ease-in-out;
+
+}
+.calendar_content:hover img{
+    width: 830px;
+    height: auto;
+    border: 3px solid #ffcc00; 
+
+}
+.about,.about_waves {
+    border-radius:10px ;
+    cursor: pointer;
+    position: absolute;
+    width: 8rem;
+    height: 3.5rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ffffffc2;
+    bottom: 2rem;
+    z-index: 33;
+}
+
+.about:hover {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: #000;
+    width: 8rem;
+    height: 3.5rem;
+    bottom: 2rem;
+    z-index: 34;
+}
+.about:hover p {
+   color: #000;
+}
+.about_waves {
+    animation: Waves 1.5s ease-in-out infinite;
+}
 /******* COMMON STYLES ********/
 
 .circular {
@@ -522,6 +563,28 @@ body.bg6 {
       bottom: 30px;
     }
   }
+
+  @keyframes Waves {
+    0% {
+      opacity: 1;
+    }
+   
+    50% {
+       
+        height: 3.8rem;
+        transform: scale(1.3);
+        opacity: .1;
+    }
+    80% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+  }
+
 
   @keyframes MoveArrowUpDown {
     0%, 100% {

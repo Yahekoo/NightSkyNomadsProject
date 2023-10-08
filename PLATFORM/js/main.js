@@ -58,13 +58,15 @@ function start(e) {
         case 'simulation':
             window.open("simulation.html","_self")
           break;
-          case 'calendar':
+          case 'calender':
             window.open("calendar.html","_self")
           break;
           case 'home':
             window.open("../index.html","_self")
           break;
-    
+          case 'about':
+            window.open("AboutUs.html","_self")
+          break;
       }
 
 }
