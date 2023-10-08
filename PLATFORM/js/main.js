@@ -53,7 +53,7 @@ function start(e) {
             window.open("information.html","_self");
             break;
         case 'quiz':
-            window.open("quiz.html","_self")
+            window.open("teasergame.html","_self")
           break;
         case 'simulation':
             window.open("simulation.html","_self")
