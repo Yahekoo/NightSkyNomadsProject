@@ -33,14 +33,40 @@ async function disapearPlanets(e) {
         el.style.transition = "filter ease-out 1.9s, transform ease-in-out 2s";
 
     await timeout(2000);
-    console.log("tests");
-    window.open("pages/kids.html","_self");
+    e === "goto_kids" ? window.open("pages/kids.html","_self") : window.open("pages/young_learners.html","_self") ;
     
 
 
 
    
     
+}
+
+
+function start(e) {
+
+    switch (e) {
+        case 'glasses':
+            window.open("glasses.html","_self");
+          break;
+        case 'information':
+            window.open("information.html","_self");
+            break;
+        case 'quiz':
+            window.open("quiz.html","_self")
+          break;
+        case 'simulation':
+            window.open("simulation.html","_self")
+          break;
+          case 'calendar':
+            window.open("calendar.html","_self")
+          break;
+          case 'home':
+            window.open("../index.html","_self")
+          break;
+    
+      }
+
 }
 
 function timeout(ms) {
@@ -55,10 +81,12 @@ function whiteOut() {
 }
 
 
-async function playHover() {
+ function playHover() {
     document.getElementById('audio_hover').play();
 }
 
-async function playClick() {
+ function playClick() {
     document.getElementById('audio_click').play();
 }
+
+

@@ -7,7 +7,7 @@
     <link href="../css/style.css" rel="stylesheet" />
     <link href="..:css/common.css" rel="stylesheet" />
     <script src="../js/main.js"></script>
-    <title>Levels - NightSkyNomads</title>
+    <title>Young Learners - NightSkyNomads</title>
     
 </head>
 <body class="bg">
@@ -16,16 +16,16 @@
 
     <div class="app-container flex-column flex-start">
         <div class="row flex-row flex-stretch">
-            <img src="../assets/planets/planet2.png" class="img-200" id="icon" alt="nomad logo"/>
+            <img src="../assets/nomad.jpeg" class="img-150 circular mt1" id="icon" alt="nomad logo"/>
             <div class="flex-center flex-column">
                 <h3 class="mt2 mb1 white rem2">Wear your solar glasses!</h3>
             <p class="white">Your guide to learn about Lunar and Solar Eclipse</p>
             </div>
-            <img src="../assets/planets/planet2.png" class="img-200" id="icon" alt="nomad logo"/>
+            <img src="../assets/nasalogo.jpg" class="img-150 circular mt1" id="icon" alt="nomad logo"/>
         </div>
 
         <br class="mt3"/>
-        <div onmouseover="playHover()" id="level_1" class="level row flex-row flex-center">
+        <div onClick="start('glasses')" onmouseover="playHover()" id="level_1" class="level row flex-row flex-center">
             <div class="level_no flex-column flex-center">
                 <h3 class="">1</h3>
                 <p class="">Level</p>
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div onmouseover="playHover()" id="level_2" class="level row flex-row flex-center">
+        <div onClick="start('information')" onmouseover="playHover()" id="level_2" class="level row flex-row flex-center">
             <div class="level_no flex-column flex-center">
                 <h3 class="">2</h3>
                 <p class="">Level</p>
@@ -45,17 +45,17 @@
             </div>
         </div>
 
-        <div onmouseover="playHover()" id="level_3" class="level row flex-row flex-center">
+        <div onClick="start('quiz')" onmouseover="playHover()" id="level_3" class="level row flex-row flex-center">
             <div class="level_no flex-column flex-center">
                 <h3 class="">3</h3>
                 <p class="">Level</p>
             </div>
             <div class="level_title flex-row flex-center">
-                <p class="">WIN THE QUIZ</p>
+                <p class="">START YOUR GAME</p>
             </div>
         </div>
 
-        <div onmouseover="playHover()" id="level_4" class="level row flex-row flex-center">
+        <div onClick="start('simulation')" onmouseover="playHover()" id="level_4" class="level row flex-row flex-center">
             <div class="level_no flex-column flex-center">
                 <h3 class="">4</h3>
                 <p class="">Level</p>
