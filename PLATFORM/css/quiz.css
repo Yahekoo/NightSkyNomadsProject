@@ -109,18 +109,18 @@ li {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 90px; /* Adjust the width as needed */
+    width: 100px; /* Adjust the width as needed */
     height: auto;
-    border-radius: 37px;
+    border-radius: 30px;
 }
 
 .logo-right {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 90px; /* Adjust the width as needed */
+    width: 100px; /* Adjust the width as needed */
     height: auto;
-    border-radius: 37px;
+    border-radius: 30px;
 }
 .img-left {
   position: absolute;
