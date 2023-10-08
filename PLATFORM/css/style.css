@@ -473,6 +473,12 @@ body.bg6 {
     border: 3px solid #ffcc00; 
 
 }
+.glasses {
+    width: 800px;
+    height: auto;
+    border: 3px solid #ffcc00; 
+    transition: all .3s ease-in-out;
+}
 .about,.about_waves {
     border-radius:10px ;
     cursor: pointer;
