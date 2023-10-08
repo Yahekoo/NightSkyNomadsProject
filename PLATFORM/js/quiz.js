@@ -16,12 +16,12 @@ const quizData = [
         correct: "c",
         },
         {
-        question: "______ takes place when the Earth intersects the umbra portion of the Moon\’s shadow.",
-        a: "Partial solar eclipse",
-        b: "Total solar eclipse",
-        c: "Partial lunar eclipse",
-        d: "Total lunar eclipse",
-        correct: "b",
+            question: "______ takes place when the Earth intersects the umbra portion of the Moon s shadow.",
+            a: "Partial solar eclipse",
+            b: "Total solar eclipse",
+            c: "Partial lunar eclipse",
+            d: "Total lunar eclipse",
+            correct: "b",
         },
         {
         question: "Why don't we have a solar eclipse every month?",
@@ -40,9 +40,13 @@ const quizData = [
     const c_text = document.getElementById("c_text");
     const d_text = document.getElementById("d_text");
     const submitButton = document.getElementById("submit");
+    const submitdiv = document.getElementById("submitdiv");
+    const nextButton = document.getElementById("next");
     let currentQuiz = 0;
     let score = 0;
-
+    let falsanswer=0;
+    let answer=null;
+    nextButton.style.display="none";
     const deselectAnswers = () => {
         answerElements.forEach((answer) => (answer.checked = false));
     };
@@ -64,13 +68,37 @@ const quizData = [
     };
     loadQuiz();
     submitButton.addEventListener("click", () => {
-        const answer = getSelected();
+        answer=0;
+        answer = getSelected();
         if (answer) {
             if (answer === quizData[currentQuiz].correct) score++;
-            /*else  change the color of the label to red*/
-            currentQuiz++;
+            else {
+                const wronganswer = document.getElementById(answer+"_text");
+                wronganswer.style.backgroundColor="red";
+                falsanswer=1;
+            } 
             /* change the colore of the true answer to green */
-            
+            const correctanswer = document.getElementById(quizData[currentQuiz].correct+"_text");
+            correctanswer.style.backgroundColor="green";
+
+            submitButton.style.display="none";
+            nextButton.style.display="block";
+
+        }
+    });
+
+    nextButton.addEventListener("click", () => {
+                console.log("trigered");
+                if(falsanswer){
+                    const wronganswer = document.getElementById(answer+"_text");
+                    wronganswer.style.removeProperty("background-color");
+                }
+                falsanswer=0;
+            const correctanswer = document.getElementById(quizData[currentQuiz].correct+"_text");
+            correctanswer.style.removeProperty("background-color");
+            currentQuiz++;
+            submitButton.style.display="block";
+            nextButton.style.display="none";
             if (currentQuiz < quizData.length) loadQuiz();
             else {
                 if (score/quizData.length <0.25) message = "You're off to a good start, and we can work together to make it even better. \n <h1> 😅 </h1>";
@@ -80,8 +108,8 @@ const quizData = [
                 quiz.innerHTML = `
                 <h2>You answered <i> ${score}/${quizData.length} </i> questions correctly</h2>
                 <h2>${message}</h2>
-                <button onclick="history.go(0)">Take the quiz again</button>
+                <button class="button" onclick="history.go(0)">Take the quiz again</button>
                 ` 
             }
-        }
-    });
+            console.log("fin trigered");
+        });
