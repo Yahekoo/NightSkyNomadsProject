@@ -1,0 +1,5 @@
+.DS_Store
+.gitignore.swp
+PLATFORM/.DS_Store
+PLATFORM/assets/.DS_Store
+PLATFORM/assets/videos/.DS_Store

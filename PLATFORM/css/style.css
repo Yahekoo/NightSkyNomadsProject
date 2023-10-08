@@ -23,31 +23,6 @@ body {
 
 
 
-/******* COMMON STYLES ********/
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.row {
-    width: 100%;
-    padding: .5rem 1rem;
-}
-
-.center {
-    margin : auto auto ; 
-    text-align: center;
-}
-
 #nomad_icon {
     animation: MoveUpDown 3.4s ease-in-out infinite;
     position: relative;
@@ -108,20 +83,27 @@ body {
     z-index: 3;
     width: 100%;
 }
-
+.home_menu {
+    width: max-content;
+}
 .menu_element {
     cursor: pointer;
     min-width: 200px;
     padding: 1rem 1rem;
     margin: 2rem 1rem;
-    background-color: aliceblue ;
+    background-color: rgb(255, 255, 255) ;
     border: 3px solid #ffffff;
+    box-sizing: border-box;
     border-radius: 10px;
     color: black;
-    
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .menu_element:hover {
+    box-sizing: border-box;
     cursor: pointer;
     min-width: 200px;
     padding: 1rem 1rem;
@@ -135,10 +117,186 @@ body {
     
 }
 
-.menu_element:focus {
-    background-color: #ffffff;
-    
+.level {
+    cursor: pointer;
+    width: max-content;
 }
+
+.level:hover .level_title::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    transition: width ease-in-out .4s;
+   
+} 
+
+#level_1 .level_title::after {
+    background-color: rgb(19, 84, 79);
+} 
+#level_2 .level_title::after {
+    background-color: rgb(255, 213, 0);
+} 
+#level_3 .level_title::after {
+   
+    background-color: rgb(29, 44, 96);
+} 
+#level_4 .level_title::after {
+   
+    background-color: rgb(92, 24, 59);
+} 
+
+#level_1:hover .level_title::after {
+   
+    background-color: rgb(19, 84, 79);
+} 
+#level_1:hover .level_title {
+    
+    background-color: rgb(19, 84, 79);
+} 
+#level_1:hover  .level_no > h3  {
+    
+    color: rgb(19, 84, 79);
+} 
+
+
+
+#level_2:hover .level_title::after {
+   
+    background-color: rgb(255, 213, 0);
+} 
+#level_2:hover .level_title {
+    
+    background-color: rgb(255, 213, 0);
+} 
+#level_2:hover  .level_no > h3  {
+    
+    color: rgb(255, 213, 0);
+} 
+
+#level_3:hover .level_title::after {
+   background-color: rgb(29, 44, 96);
+} 
+#level_3:hover .level_title {
+    background-color: rgb(29, 44, 96);
+} 
+#level_3:hover  .level_no > h3  {
+    color: rgb(29, 44, 96);
+} 
+
+#level_4:hover .level_title::after {
+    background-color: rgb(92, 24, 59);
+ } 
+ #level_4:hover .level_title {
+     background-color: rgb(92, 24, 59);
+ } 
+ #level_4:hover  .level_no > h3  {
+     color: rgb(92, 24, 59);
+ } 
+
+
+
+.level:hover .level_title > p {
+    color: #ffffff;
+   transition: color ease-in-out .2s,font-size ease-in-out .2s;
+   font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.level:hover .level_no > h3 {
+    
+   transition: color ease-in-out .3s,font-size ease-in-out .4s;
+   font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.level:hover .level_no > p {
+    
+    font-size: 0;
+ }
+
+
+.level_no {
+    padding: 1.3rem 1rem;
+    background-color: #ffffff;
+    width: 5rem ;
+    height: 5rem;
+    margin: 1rem 1rem;
+}
+
+.level_no > h3 {
+    font-size: 2rem;
+    font-weight: 800;
+
+   transition: color ease-in-out .3s,font-size ease-in-out .4s;
+}
+
+
+.level_title {
+    position: relative;
+    min-width: 28rem;
+    height: 5rem;
+    padding: 1.3rem 1rem;
+    background-color: #ffffff;
+}
+
+.level_title::after{
+    content:"";
+   position: absolute;
+   z-index: 33;
+   width: 0rem;
+   height: 5rem;
+   transition: width ease-in-out .2s;
+}
+
+
+
+.level_title > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 34;
+    transition: color ease-in-out .2s,font-size ease-in-out .2s;
+}
+
+
+
+
+/******* COMMON STYLES ********/
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.flex-stretch {
+    justify-content: space-around;
+    align-items: center;
+}
+.img-200 {
+    width: 200px;
+    height: auto;
+}
+.row {
+    width: 100%;
+    padding: .5rem 1rem;
+}
+
+.center {
+    margin : auto auto ; 
+    text-align: center;
+}
+
 /****** KeyFrames ********/
 
 
