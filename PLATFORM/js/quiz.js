@@ -42,10 +42,13 @@ const quizData = [
     const submitButton = document.getElementById("submit");
     const submitdiv = document.getElementById("submitdiv");
     const nextButton = document.getElementById("next");
+    const choices = document.getElementById("choices");
+    const start =document.getElementById("start");
     let currentQuiz = 0;
     let score = 0;
     let falsanswer=0;
     let answer=null;
+    let x=1;
     nextButton.style.display="none";
     const deselectAnswers = () => {
         answerElements.forEach((answer) => (answer.checked = false));
@@ -66,7 +69,13 @@ const quizData = [
         c_text.innerText = currentQuizData.c;
         d_text.innerText = currentQuizData.d;
     };
-    loadQuiz();
+    start.addEventListener("click", () => {
+        submitButton.style.display="block";
+        choices.style.display="block";
+        start.style.display="none";
+        loadQuiz();
+    });
+
     submitButton.addEventListener("click", () => {
         answer=0;
         answer = getSelected();
@@ -88,7 +97,6 @@ const quizData = [
     });
 
     nextButton.addEventListener("click", () => {
-                console.log("trigered");
                 if(falsanswer){
                     const wronganswer = document.getElementById(answer+"_text");
                     wronganswer.style.removeProperty("background-color");
@@ -111,5 +119,5 @@ const quizData = [
                 <button class="button" onclick="history.go(0)">Take the quiz again</button>
                 ` 
             }
-            console.log("fin trigered");
+
         });
